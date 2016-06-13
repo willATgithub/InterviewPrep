@@ -1,0 +1,6 @@
+<project>
+	<target name="eclipse-test-runner">
+		<java classname="TestRunner" classpath="bin:./bin/libs/junit-4.12.jar:./bin/libs/hamcrest-core-1.3.jar">
+		</java>
+	</target>
+</project>
