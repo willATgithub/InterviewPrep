@@ -1,8 +1,13 @@
 import org.junit.Test;
+import org.junit.rules.Timeout;
+import org.junit.Rule;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.junit.Assert.*;
 public class TestFibonacci {
+	@Rule
+    public Timeout globalTimeout = Timeout.seconds(2); // 10 seconds max per method tested
+
 	@Test
 	public void testInstanceOfFibonacci() throws Exception {
 		Fibonacci fib = new Fibonacci();

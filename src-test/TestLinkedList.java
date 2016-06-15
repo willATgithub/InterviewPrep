@@ -6,8 +6,13 @@ import list.ListFactory;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import org.junit.rules.Timeout;
+import org.junit.Rule;
 
 public class TestLinkedList {
+	@Rule
+    public Timeout globalTimeout = Timeout.seconds(TestConstants.TEST_TIMEOUT); // 10 seconds max per method tested
+
 	@Test
 	public void testLinkedListisEmptygetLength() throws Exception {
 		List list = new ListFactory().getList("LinkedList");

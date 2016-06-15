@@ -1,10 +1,16 @@
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Rule;
+import org.junit.rules.Timeout;
+
 import tree.BinarySearchTree;
 import tree.Node;
 
 public class TestBinarySearchTree {
+	@Rule
+    public Timeout globalTimeout = Timeout.seconds(TestConstants.TEST_TIMEOUT); // 10 seconds max per method tested
+
 	@Test
 	public void testBinarySearchTreeConstructor() throws Exception {
 		BinarySearchTree tree = new BinarySearchTree();

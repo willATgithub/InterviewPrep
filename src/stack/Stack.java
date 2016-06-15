@@ -16,4 +16,5 @@ public class Stack {
 	public int dequeue() {
 		return stack.pop().getValue();
 	}
+	
 }

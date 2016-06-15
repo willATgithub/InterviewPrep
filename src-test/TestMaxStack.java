@@ -3,8 +3,13 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
+import org.junit.rules.Timeout;
+import org.junit.Rule;
 
 public class TestMaxStack {
+    @Rule
+    public Timeout globalTimeout = Timeout.seconds(2); // 10 seconds max per method tested
+
 	@Test
 	public void testMaxListConstructor() throws Exception {
 		MaxStack stack = new MaxStack();
